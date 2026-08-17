@@ -6,7 +6,7 @@ budgets, verification gates, and a failure ledger — instead of ad hoc promptin
 This is not a framework and not a tool you install. It is the set of rules one person actually
 runs, session after session, to get multi-hour AI work done unattended and trust the result
 without re-reading it end to end. The rules exist because something broke without them; each one
-is stated as a rule plus (eventually, see roadmap below) the failure that created it.
+is stated as a rule plus the specific failure that created it.
 
 ## The shape of it, in one paragraph
 
@@ -36,8 +36,18 @@ committed artifact in the same sitting effectively never happened.
 
 None of it is exotic. All of it was earned by something failing first.
 
-## What's in this repo (v0.1)
+## What's in this repo
 
+- **[MECHANISMS.md](MECHANISMS.md)** — the twelve load-bearing rules the whole system runs on
+  (contract authority envelopes, floor-governed depth, disk-as-truth verification, negative controls,
+  blind cross-family grading, and the rest), each stated as the rule, the specific failure that
+  created it, and how to replicate it in your own setup.
+- **[FAILURES.md](FAILURES.md)** — the failure record itself: twelve real incidents, what each one
+  cost, and which rule closed the gap. Read this one first if you are skeptical — it is what makes
+  the mechanisms legible instead of looking like ceremony.
+- **[AUTHORING-A-CONTRACT.md](AUTHORING-A-CONTRACT.md)** — the process for turning a rough idea into
+  a runnable contract, keyed to the template's own sections, including the pre-launch checks and an
+  explicit list of what is still undocumented.
 - **[LOOPS.md](LOOPS.md)** — both loops, phase by phase, with the measured numbers behind the
   design choices (why depth comes from floors and never from a ceiling, what a floor-governed run
   looks like against a clock-governed one, real per-burn cost).
@@ -48,18 +58,20 @@ None of it is exotic. All of it was earned by something failing first.
   *not* get for free, stated honestly, so you don't go looking for a slate-producer or a backlog
   culture that this repo cannot hand you.
 
-## Roadmap (not yet written — v0.2)
-
-- **MECHANISMS.md** — the full list of load-bearing rules this system runs on (contract authority
-  envelopes, floor-governed depth, disk-as-truth verification, negative controls, blind cross-model
-  grading, and more), each with the specific failure that made it necessary.
-- **FAILURES.md** — the failure record itself: what actually went wrong, run by run, and what rule
-  closed the gap. This is the part that makes the mechanisms legible instead of looking like
-  ceremony.
-
-If you only have five minutes, read LOOPS.md's numbers section and PORTING.md's "what you don't
+If you only have five minutes, read [FAILURES.md](FAILURES.md) and PORTING.md's "what you don't
 get" list — those two are the difference between this being a checklist you can act on and a
 management-consulting document you nod at and forget.
+
+## Roadmap
+
+Still open, and deliberately not faked: a generalized version of the dispatch tooling. The scripts
+this doctrine runs on are absolute-path, single-platform, and full of traps specific to one shell —
+[PORTING.md](PORTING.md) explains why porting them as-is would be worse than not porting them. A
+handful of things this system genuinely runs on are also still undocumented — chiefly how a night
+gets chosen as a build day versus a burn night — and they are listed honestly in
+[PORTING.md](PORTING.md) and in
+[AUTHORING-A-CONTRACT.md](AUTHORING-A-CONTRACT.md#what-is-open-in-this-runbook) rather than papered
+over.
 
 ## License
 

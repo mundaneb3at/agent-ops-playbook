@@ -52,14 +52,19 @@ person to sit down and run it.
 
 ## A known, honestly-stated gap in this playbook itself
 
-Two things this system runs on are **not yet documented anywhere**, including in the source
-material this repo was written from:
+One thing this system runs on is **not documented anywhere**, including in the source material this
+repo was written from:
 
-1. **How a session decides "tonight is an interactive build day vs. an unattended burn night."**
-   That judgment call currently lives entirely in one person's head.
-2. **The actual runbook for *authoring* a new contract from the template.** The template exists
-   and is documented in detail; the process of turning a rough idea into a filled-in, ready-to-run
-   contract has never itself been written down.
+- **How a session decides "tonight is an interactive build day vs. an unattended burn night."** That
+  judgment call currently lives entirely in one person's head. Nothing in this repo can tell you how
+  to make it.
 
-Both are real gaps, not oversights hidden from you. If you build either one for your own setup,
-that's genuinely new ground, not something you missed in this repo.
+A second gap — **the runbook for *authoring* a new contract from the template** — was in this list
+until v0.2, and is now partially closed by
+[AUTHORING-A-CONTRACT.md](AUTHORING-A-CONTRACT.md). Read that file's own
+[OPEN list](AUTHORING-A-CONTRACT.md#what-is-open-in-this-runbook) before relying on it: it was
+derived from the mechanisms, the failure record, and the template's structure rather than extracted
+from a documented practice, and it marks the places where it is inferring rather than reporting.
+
+These are real gaps, not oversights hidden from you. If you build a real answer to either for your
+own setup, that's genuinely new ground, not something you missed in this repo.
